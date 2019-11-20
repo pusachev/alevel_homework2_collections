@@ -1,4 +1,5 @@
 ﻿using System;
+using HourseDatabaseLiblary;
 
 namespace HomeWork2
 {
@@ -15,7 +16,7 @@ namespace HomeWork2
 
     static class Menu
     {
-        static void Add()
+        public static Horse Add()
         {
             Console.WriteLine("Please enter horse name: ");
             string name = Console.ReadLine();
@@ -23,7 +24,12 @@ namespace HomeWork2
             Console.WriteLine("Please enter horse pedigree");
             string pedigree = Console.ReadLine();
 
-            
+            int age = GetIntData("Please enter age: ");
+            int victory = GetIntData("Please enter count of victory: ");
+            int lose = GetIntData("Please enter lose; ");
+
+
+            return new Horse(name, pedigree, victory, lose);
 
         }
 

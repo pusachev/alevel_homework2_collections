@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace HourseDatabaseLiblary
 {
     public class Horse
-    {
+    { 
         public string Pedigree { get; private set; }
 
         public string Name { get; set; }
@@ -18,13 +20,12 @@ namespace HourseDatabaseLiblary
 
         public Horse(string name, string pedigree, int age, int victory, int lose)
         {
+
             Pedigree = pedigree;
             Name = name;
             Age = age;
             Victory = victory;
             Lose = lose;
         }
-
-
     }
 }
